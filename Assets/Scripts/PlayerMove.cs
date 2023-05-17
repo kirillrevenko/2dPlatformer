@@ -15,7 +15,7 @@ private void Awake()
     anima = GetComponent<Animator>();
 }
 
-private void Update()
+private void FixedUpdate()
 {
     float horizontalInput = Input.GetAxis("Horizontal");
     body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);

@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
         anima = GetComponent<Animator>();
     }
 
-    private void FixedUpdate() 
+    private void Update() 
     {
         if(heroHealth > numOfHearts)
         {

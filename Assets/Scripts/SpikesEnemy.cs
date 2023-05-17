@@ -3,11 +3,15 @@ using UnityEngine;
 public class SpikesEnemy : MonoBehaviour
 {
     [SerializeField] private float damage;
+    private Health heroHealth;
 
-    private void OnTriggerEnter2D (Collider2D collision) 
+    private void OnTriggerEnter2D(Collider2D collision) 
+  
     {
-       if(collision.tag == "Player")
-       collision.GetComponent<Health>().TakeDamage(damage);  
+       if(collision.gameObject.TryGetComponent(out PlayerMove body))
+        collision.GetComponent<Health>().TakeDamage(damage);  
     }
+
+
     
 }

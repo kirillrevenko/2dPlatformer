@@ -11,7 +11,7 @@ public class camerafollow : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    void Update()
+    void LateUpdate()
     {
         Vector3 temp = transform.position;
         temp.x = player.position.x;
