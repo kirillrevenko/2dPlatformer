@@ -10,6 +10,7 @@ public class Attacker : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public int attackDamage = 40;
+    
     void Update()
     {
 
@@ -25,6 +26,17 @@ public class Attacker : MonoBehaviour
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+    }
+    //+1 attackdamage in sop
+     public void AttackPlus()
+   {
+        upAttack(10);
+   }
+
+    public void  upAttack(int attackplus) 
+    {
+        attackDamage += attackplus;
+        Debug.Log(attackDamage);
     }
 
     void OnDrawGizmosSelected() 

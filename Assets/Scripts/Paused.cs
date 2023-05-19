@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Paused : MonoBehaviour
 {
     [SerializeField] GameObject pause;
+    [SerializeField] GameObject shop;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class Paused : MonoBehaviour
             Time.timeScale = 0;  
         }
 
+
     }
 
     public void PauseOff()
@@ -35,4 +37,12 @@ public class Paused : MonoBehaviour
         SceneManager.LoadScene(0);
         Time.timeScale = 1;    
     }
+
+    public void Shop()
+    {
+        shop.SetActive(true);
+        pause.SetActive(false);
+        Time.timeScale = 0;    
+    }
+
 }

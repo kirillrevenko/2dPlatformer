@@ -75,6 +75,11 @@ public class Health : MonoBehaviour
         }
     }
 
+     public void HealthPlus()
+   {
+        ChangeheroHealth(1);
+   }
+
     public void  ChangeheroHealth(int healthValue) 
     {
         heroHealth += healthValue;

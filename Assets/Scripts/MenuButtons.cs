@@ -10,6 +10,7 @@ public class MenuButtons : MonoBehaviour
     public Slider slider;
     public GameObject loadScreen;
 
+
     void Update()
     {
         if (Input.GetKey(KeyCode.F))
@@ -23,6 +24,18 @@ public class MenuButtons : MonoBehaviour
         SceneManager.LoadScene(1);  
         StartCoroutine(LoadingScreenOnFade()); 
     } 
+
+     public void choosingLevel() 
+    {
+        //SceneManager.LoadScene(1);  
+        //StartCoroutine(LoadingScreenOnFade()); 
+    } 
+
+    public void exitApp()
+    {
+        Application.Quit();
+        Debug.Log("Exit");
+    }
 
     IEnumerator LoadingScreenOnFade()
     {
